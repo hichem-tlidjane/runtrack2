@@ -19,4 +19,5 @@ for($y = 0; $y < $hauteur; $y++){
     
     echo "<br />";
 }
+
 echo "</pre>";
