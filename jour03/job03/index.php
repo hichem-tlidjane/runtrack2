@@ -1,56 +1,49 @@
 <?php
 
-
 // Créez une variable de type string nommée $str et affectez y le texte :
-// “Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.”
-// Parcourir cette chaîne en affichant seulement un caractère sur deux.
-// Ex. : Tu e ntnssrn edsdn etmscmelslre osl li.
+// “I'm sorry Dave I'm afraid I can't do that”.
+// Créez un algorithme qui parcourt cette chaîne et affiche uniquement les voyelles.
+// Ex. : IoyaeIaaiIaoa
 
 
-// affecter le texte sous la chaine string $str
-// parcourir la chaine string
-// afficher un caractere sur deux
+//  utilisation d'un backtick ` ` <= pour délimiter une chaine de caractére dans une fonction echo.
 
-// strlen fonction de compte des caractères.
-
-
-// substr(string $string, int $offset, ?int $length = null): echo (string)
-//  substr($j:0;  )
-// substr(string $string, int $offset, ?int $length = null): echo (string)
-//  substr($calcul )
-// substr-replace 
-// https://www.php.net/manual/fr/function.str-replace.php str-replace
-
-
-// for ($i=0; $i < (int)$calcul; $i++) {
-//     if ($i ) {
-
-//     }
- 
-// }
-//  On déclare str avec la phrase.
-$str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
-//  attribue la variable calcul à un retour de calcul de chaine de caractére pour la variable str
-// strlenght = calcul de la longeur des chaines de caractères. en bytes.
-
-$calcul = strlen($str);
-
-//  boucle for avec l'arguement suivant on exprimer que l'index démarre à 0, par la suite  on dis que index sera plus 
-// strictement plus petit que la variable calcul et on argumente que l'indexation sera à partir de +2 
-for ($i = 0; $i <= $calcul; $i += 2) {
-    // retour echo sur la fonction substr qui va intégrer dans un argument la conversion de str,
-    //  de l'indexaction et de sa longueur.
-    echo substr($str, $i, 1);
-   }
-
-// if substr($j:0; $j < $calcul ; $i % 2) {
- 
-   
-// }
+// strtoupper gerer les caractére en majuscule.
+// substr et supprimer des caractére string 
+// utiliser la négation sur une indexation à afficher
+// vérification des voyelles dans le tableau sur une fonction en utilisant "!" pour exclure les autres
+// caractéres par négation pour qui gere un affichage string et utiliser un echo.
+// str (fonctions qui gere les affichages et les comparaisons ou spécificité d'affichage)
+// php.net https://www.php.net/manual/en/language.operators.string.php
+// https://www.php.net/manual/en/ref.strings.php
 
 
 
+// str = la chaine caractère à afficher.
+// gestion des doubles cotes qu'il faut ajouter dans un array pour avoir un résultat identique à l'exercice.
+$str = "I'm sorry Dave I'm afraid I can't do that.";
+// déclare une variable avec des majuscules comme un dictionnaire 
+
+$voy = ['A','E','I','O','U','Y']; 
+
+// déclare une variable nettoyer en string donc caractére prêt à étre gérer avec double cote.
+
+$resul = "";
+
+
+
+for ($i = 0; $i < strlen($str); $i++) {
+
+// l'argument If la fonction in_array qui retourne un booleen avec l'argument suivant : gestion des caractére en majuscule 
+//  on utilise la variable str pour la convertir à la variable i et dans la fonction strtoupper j'indique ma variables string 
+// donc $voy ( a comprendre donc la fonction gére + variable + le dictionnaire)
+
+    if (in_array(strtoupper($str[$i]), $voy)) {
+        $resul .= $str[$i];
+    }
+}
+// fonction echo qui affiche la variable résultat
+echo $resul; 
 
 
 ?>
-

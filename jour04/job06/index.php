@@ -42,20 +42,13 @@ $count_voyelles  = 0;
 // strtoupper permet de gérer les majuscules d'une variable
 $char = str_split(strtoupper($str)); 
 
-
-
-
-
-
-
-
 // https://www.php.net/manual/fr/function.in-array.php
 
 //  itérer des valeurs de nos variables dic puisque dic as value
 // je récupére la variable char et le stockage de mes entiers 
 //  interpreter avec in array et d'associer une valeur stocké dans compteur 
+
 foreach ($char as $compteur) {
-    
 
     if (in_array($compteur, $dic['voyelles'])) {
         $count_voyelles++;
