@@ -1,0 +1,36 @@
+table{
+    width: "300 px";
+    margin: auto;
+    border: 2px solid black;
+    background-color: lightslategray;
+    text-align: center;
+}
+.table td{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;}
+.centrage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+td button{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+button:hover{
+    background-color: rgb(205, 205, 50);
+}
+button{
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
